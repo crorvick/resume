@@ -1,0 +1,142 @@
+\voffset=0in
+\vsize=9in
+\hoffset=0in
+\hsize=6.5in
+
+\nopagenumbers
+
+\bigskip
+
+{\font\bigrm=cmr10 at 22pt
+ \font\smlrm=cmr9
+ \line{\hbox{\bigrm Christopher L. Rorvick}\hss
+ \vbox{
+  \baselineskip=11pt
+  \hbox to3.35in{\smlrm\hfil
+  3404 N. Southport Ave. Apt.\ 2\quad$\bullet$\quad Chicago, IL \ 60657}
+  \hbox to3.35in{\smlrm\hfil
+  (773) 281--5251\quad$\bullet$\quad chris${\underline{\enspace}}$rorvick@yahoo.com}
+}}}
+\smallskip
+\hrule
+
+\parindent=0pt
+
+\def\beginsection#1{
+\par\begingroup\parindent=0pt\indent%
+\setbox0=\hbox{{\bf #1}\enspace}%
+\ifdim\wd0>\leftskip{\leftskip=0in{\bf #1}\par}\else\llap{\hbox to1in{{\bf #1}\hss}}\fi%
+\ignorespaces
+}
+
+\def\endsection{\par\endgroup}
+
+
+\def\beginlist#1{
+\par\begingroup\parindent=0pt%
+\setbox0=\hbox{{#1}\enspace}%
+\edef\listhanger{\hangindent=\wd0}%
+\everypar={\listhanger\copy0}%
+\par\indent\ignorespaces
+}
+
+\def\endlist{\par\endgroup}
+
+\leftskip=1in
+
+\vfil
+
+\beginsection{Objective}
+To work in software development and architecture, leveraging my experience
+and providing opportunity for it to grow.  
+\endsection
+\vfil
+
+\beginsection{Education}
+University of Illinois at Urbana-Champaign\hfill May 2000\par
+{\sl B.S. in Computer Science}
+\endsection
+\vfil
+
+\beginsection{Experience}
+Universal Access, Inc.\ -- Chicago, IL\hfill April 2001--April 2002\par
+{\sl Senior Deveoloper}
+\vskip .25pc
+\beginlist{$\bullet$}
+Designed a batch circuit costing application.  Managed a developer who
+created the user-interface portion using JSPs.  Implemented a Java server
+for processing the batch jobs.  Used JMS to communicate job statuses to the
+client application.
+
+Implemented web-based utility (Servlets/JSPs) for searching telecom carrier
+locations in company's proprietary Oracle database.
+
+Designed a single sign-on security framework for JSP/Servlet applications.
+Used LDAP services for authentication.  Implemented serveral proof-of-concept
+components and used them to gather performance metrics.  Participated in
+many planning sessions serving as the technical expert.
+\endlist
+\vskip .5pc
+
+
+Second Millennium Consulting, Inc.\ -- Chicago, IL\hfill January 2000--March 2001\par
+{\sl Senior Developer}
+\vskip .25pc
+\beginlist{$\bullet$}
+Built Java software for internal use at Britannica.com including a
+web-based security administration tool and an applet for online content
+management.
+
+Participated in a limited business process analysis for an automotive
+insurance subsidiary.  Produced a proof-of-concept claim processing system
+using J2EE technologies.
+
+Designed a simple compression algorithm based on Huffman codes and implemented
+it both as a Java component and a Win32 DLL for client's web-application.
+\endlist
+\vskip .5pc
+
+
+Argus Systems Group, Inc.\ -- Savoy, IL\hfill July 1997--May 1998\par
+{\sl Software Engineer}
+\vskip .25pc
+\beginlist{$\bullet$}
+Worked with a team to develop to develop a hard disk encryption product for
+Windows~NT.  Wrote an encryption key administration program using Visual Basic
+and used C to implement device drivers to handle the encryption.
+
+Implemented several system calls for company's security-enhanced Solaris kernel.
+The product, PitBull, provides a trusted OS environment meeting ITSEC's B1
+security criteria.  Wrote unit tests for each call that were integrated into
+overall test suite.
+\endlist
+
+\endsection
+\vfil
+
+\beginsection{Certifications}
+Sun Certified Programmer for the Java 2 Platform\hfill November 2000\par
+\endsection
+\vfil
+
+\settabs \+\hbox to1in{\hss}&J2EE (Servlet, JSP, JDBC,\quad\quad\quad\quad\quad&C/C++\quad\quad\quad\quad\quad&Windows 95/NT/2000\quad\quad\quad\quad\quad\cr
+\+{\bf Skills}&J2SE (JFC, Security)&C/C++&Windows 95/NT/2000\cr
+\vskip .25pc
+\+&J2EE (Servlet, JSP, JDBC,&SQL&Unix (Linux, Solaris)\cr
+\vskip .25pc
+\+&\qquad EJB, JNDI, JTA, JMS)&\TeX&TCP/IP networking\cr
+\+&WebLogic 5.1/6.1&XML\cr
+\vfil
+
+\beginsection{Achievements}
+Officer -- Triangle Fraternity, Alpha Chapter\hfill 1996, 1997 and 1998
+\vskip .25pc
+Eagle Scout -- Boy Scouts of America\hfill August 1994\par
+\endsection
+
+\vskip 1pc
+
+\centerline{{\it References available upon request}}
+
+\eject\end
+
