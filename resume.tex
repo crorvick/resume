@@ -1,174 +1,335 @@
-% resume.tex
-%
-% Resume source file.
-%
-% $Id:$
 
-\voffset=0in
-\vsize=9in
-\hoffset=0in
-\hsize=6.5in
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+\pdfhorigin 1in
+\pdfvorigin 1in
+
+\nopagenumbers
+\parindent=0pt
 
 \font\rm=ptmr at 10pt
 \font\bf=ptmb at 10pt
 \font\it=ptmri at 10pt
-\font\sl=ptmri at 10pt
+\font\sl=ptmbo at 10pt
+\font\zdb=pzdr at 10pt
+\font\lgrm=ptmr at 24pt
+\font\smrm=ptmr at 9pt
+\font\superrm=ptmr at 8pt
+
+\def\super#1{\lower -.5ex \hbox{\superrm #1}}
+\def\xmrk{{\zdb 4}}
+
 \rm
 
-\nopagenumbers
+{\lgrm Christopher L.~Rorvick\hfill\vbox{\smrm
+\hbox to 3in {\hfil
+921 Canonero Drive\quad $\bullet$\quad Naperville, IL~~60540}
+\hbox to 3in {\hfil
+(630) 416-0382\quad $\bullet$\quad chris@rorvick.com}
+}}
 
-\bigskip
+\vskip 5pt \hrule \vskip 10pt
 
-{\font\bigrm=ptmr at 22pt
- \font\smlrm=ptmr at 8pt
- \line{\hbox{\bigrm Christopher L. Rorvick}\hss
- \vbox{
-  \baselineskip=11pt
-  \hbox to3.35in{\smlrm\hfil
-  1284 N. Milwaukee Ave. Apt.\ 4A\quad$\bullet$\quad Chicago, IL \ 60622}
-  \hbox to3.35in{\smlrm\hfil
-  (773) 342--9343\quad$\bullet$\quad chris${\underline{\enspace}}$rorvick@yahoo.com}
-}}}
-\smallskip
-\hrule
+\long\def\section#1#2{\leftskip 1in \noindent\llap{\hbox to 1in {\bf #1\hss}}{#2}\vskip 20pt}
+\long\def\subsection#1#2{{\sl #1}\hfill{\bf #2}}
+\def\bulleted#1#2{\setbox0=\hbox{#1\ }\hangindent=\wd0#1 #2}
 
-\parindent=0pt
 
-\def\beginsection#1{
-\par\begingroup\parindent=0pt\indent%
-\setbox0=\hbox{{\bf #1}\enspace}%
-\ifdim\wd0>\leftskip{\leftskip=0in{\bf #1}\par}\else\llap{\hbox to1in{{\bf #1}\hss}}\fi%
-\ignorespaces
+\section{PROFILE}{%
+Software designer with twelve years experience producing high quality
+solutions across multiple industries using many technologies.
+Five years in the financial industry focusing on low-latency systems
+supporting high frequency trading algorithms.
 }
 
-\def\endsection{\par\endgroup}
-
-
-\def\beginlist#1{
-\par\begingroup\parindent=0pt%
-\setbox0=\hbox{{#1}\enspace}%
-\edef\listhanger{\hangindent=\wd0}%
-\everypar={\listhanger\copy0}%
-\par\indent\ignorespaces
+\section{EDUCATION}{%
+{\bf University of Illinois}\quad Urbana--Champaign\par
+\subsection{B.S.~in Computer Science}
+    {May 2000}
 }
 
-\def\endlist{\par\endgroup}
+\section{EXPERIENCE}{%
+\parskip=5pt
+{\bf TradeLink, LLC}\quad Chicago, IL
 
-\leftskip=1in
+Trading firm participating in a diversified range of asset classes
+including securities, futures, options, and commodities.
 
-\vskip .25pc
-\vfill
+\vskip 5pt
+\subsection{Software Designer, Algorithmic Trading \& Smart Execution}
+    {September 2010 -- present}
 
-\beginsection{Objective}
-To find work in software development and architecture leveraging my
-experience and providing opportunity for it to grow.
-\endsection
-\vfill
+Responsible for maintaining and deploying software for firm's two
+algorithmic trading platforms and implementing and maintaining trading
+strategies within these platforms.
 
-\beginsection{Education}
-University of Illinois at Urbana-Champaign\hfill May 2000\par
-{\sl B.S. in Computer Science}
-\endsection
-\vfill
+\bulleted{$\bullet$}{%
+Optimized order execution for a mean reversion strategy trading a
+\$40 million portfolio.
+Moved logic for managing execution of leg orders out of legacy
+Python-based platform to highly optimized smart order router.
+Significant reduction in latency by about four milliseconds per
+transaction.
+}
 
-\beginsection{Experience}
-US Cellular -- Bensenville, IL\hfill February 2003 -- present\par
-{\sl Systems Analyst}
-\vskip .25pc
-Worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked worked.
-\beginlist{$\bullet$}
-Task 1.
+\bulleted{$\bullet$}{%
+Analyzed execution for a high frequency FX basis trade.
+Automated the plotting of time-series data pulled from disparate sources
+included log files, market data tick repositories, and trading interface
+audit logs.
+Recommended and implemented numerous optimizations included refactoring
+of the top-level execution logic, bug fixes to the feed handler, and
+tuning the network stack.
+}
 
-Task 2.
-%Worked on AIM application, companies web-based application for account activation and management by external users.  Developed new functionality for {\bf easy}edge (data services) launch.
-\endlist
-\vskip .5pc
+\bulleted{$\bullet$}{%
+Implemented FIX trading interface within firm's second generation
+trading platform.
+Allows trading strategies implemented within this platform to directly
+connect exchanges.
+This eliminates multiple hops incurred using the traditional
+infrastructure and reduces the footprint required when co-locating.
+}
 
+\vskip 5pt
+\subsection{Software Designer / Technical Lead, Application Development}
+    {January 2007 -- August 2010}
 
-Universal Access, Inc.\ -- Chicago, IL\hfill April 2001--May 2002\par
-{\sl Senior Deveoloper}
-\vskip .25pc
-\beginlist{$\bullet$}
-Designed a batch circuit costing application for deployment in Web\-Logic
-Server 5.1.  Managed a developer who created the user-interface portion
-using JSPs.  Implemented a Java server for processing the batch jobs.
+Developed and maintained many applications and infrastructure
+components critical to the firm.
+Managed development efforts including providing design and technical
+direction to other developers.
 
-Worked on EJB components for automated circuit configuration and costing
-application, also deployed within Web\-Logic 5.1.  Particpated in planning
-sessions for migration to Web\-Logic Server 6.1.
+\bulleted{$\bullet$}{%
+Designed and implemented a system for local distribution of market data
+using shared memory.
+Load testing on 2.3 GHz quad-core system running four client
+applications sustained rates of more than 200,000 updates/sec with the
+90\super{th} percentile for latencies measuring less than 30 microseconds.
+Significantly reduced load on network infrastructure and trader
+workstations allowing groups to participate and profit on high-volume
+events that were previously not tradeable at the firm.
+}
 
-Designed a single sign-on security framework for JSP/Servlet applications
-deployed within Web\-Logic Server 6.1.  Used LDAP services for
-authentication.  Implemented serveral proof-of-concept components and used
-them to gather performance metrics.  Participated in many planning sessions
-serving as the technical expert.
-\endlist
-\vskip .5pc
+\bulleted{$\bullet$}{%
+Managed a project to allow execution desk traders to monitor hundreds of
+positions across the portfolios of its managed funds.
+Designed and developed a system where multiple contribution programs
+consolidated relevant data into a server.
+A client application was written for displaying this information,
+allowing traders to quickly see current positions whether they differed
+from the theoretical values, and also to anticipate upcoming trades.
+}
 
+\bulleted{$\bullet$}{%
+Maintained screen trading application displaying market data as a
+``price ladder'' including aggregate order book volumes and trade
+volumes.
+Allowed traders to click trade or to run it in an automated mode for
+trading spreads.
+}
 
-Second Millennium Consulting, Inc.\ -- Chicago, IL\hfill January 2000--April 2001\par
-{\sl Senior Developer}
-\vskip .25pc
-\beginlist{$\bullet$}
-Built Java software for internal use at Britannica.com including a
-web-based tool for securing access to EJB component services deployed
-in Web\-Logic Server 4.51.
+\bulleted{$\bullet$}{%
+Implemented multi-threaded feed handler for Eurex's
+{\it New Socket Datafeed} to provide non-netted, low-latency price data
+to fixed income group operating in London office.
+}
 
-Participated in a limited business process analysis for an automotive
-insurance subsidiary.  Produced a proof-of-concept claim processing system
-using J2EE technologies and Web\-Logic Server 5.1.
+%\vskip 5pt
+\break
+\subsection{Software Developer, Application Development}
+    {June 2005 -- June 2006}
 
-Designed a simple compression algorithm based on Huffman codes and implemented
-it both as a Java component and a Win32 DLL for client's web-application.
+Maintained a number of trading applications and back office software
+critical to the day-to-day operations of the firm.
 
-Performed code review of client's J2EE-based web-application.  Identified
-potential bottle-necks and design flaws.  Participated on an overhaul of the
-application based on results.
-\endlist
-\vskip .5pc
+\bulleted{$\bullet$}{%
+Enhanced and maintained a suite of options trading applications.
+Including two auto-traders implementing passive and active trading
+strategies respectively and an application for monitoring real-time
+implied volatilities against the volatility model being used.
+}
 
+\bulleted{$\bullet$}{%
+Responsible for the entirety of firm's legacy Java platform.
+Maintained applications for trade entry and viewing, option volatility
+model parameter generation, and several data maintenance use cases.
+Added automation to the build process and refactored code bases into
+reusable modules with version numbers.
+}
 
-Argus Systems Group, Inc.\ -- Savoy, IL\hfill July 1997--May 1998\par
-{\sl Software Engineer}
-\vskip .25pc
-\beginlist{$\bullet$}
-Worked with a team to develop to develop a hard disk encryption product for
-Windows~NT.  Wrote an encryption key administration program using Visual Basic
-and used C to implement device drivers to handle the encryption.
+\bulleted{$\bullet$}{%
+One of two developers to maintain and provide 24x7 production support
+for clearing system.  Implemented modules for processing semi-standard
+and firm-specific data formats.
+}
 
-Implemented several system calls for company's security-enhanced Solaris kernel.
-The product, PitBull, provides a trusted OS environment meeting ITSEC's B1
-security criteria.  Wrote unit tests for each call that were integrated into
-overall test suite.
-\endlist
+\vskip 20pt
 
-\endsection
-\vfill
+{\bf Impact Forensics, LLC}\quad Chicago, IL
 
-\beginsection{Certifications}
-Sun Certified Programmer for the Java 2 Platform\hfill November 2000\par
-\endsection
-\vfill
+Startup firm specializing in electronic discovery and expert witness
+services for labor and employment, trade secrets, and other matters.
 
-\settabs \+\hbox to1in{\hss}&J2EE (Servlet, JSP, JDBC,\quad\quad\quad\quad\quad&C/some C++\quad\quad\quad\quad\quad&Windows 95/NT/2000\quad\quad\quad\quad\quad\cr
-\+{\bf Skills}&J2SE (JFC, Security)&C/C++&Windows 95/NT/2000\cr
-\vskip .25pc
-\+&J2EE (Servlet, JSP, JDBC,&SQL&Unix (Linux, Solaris, HP-UX)\cr
-\vskip .25pc
-\+&\qquad EJB, JNDI, JTA, JMS)&\TeX&TCP/IP networking\cr
-\vskip .25pc
-\+&WebLogic 5.1/6.1&XML&HTML\cr
-\vfill
+\vskip 5pt
+\subsection{Manager of Electronic Discovery}
+    {July 2006 -- December 2006}
 
-\beginsection{Achievements}
-Officer -- Triangle Fraternity, Alpha Chapter\hfill 1996, 1997 and 1998
-\vskip .25pc
-Eagle Scout -- Boy Scouts of America\hfill August 1994\par
-\endsection
+Managed a lab capable of processing several terabytes of data daily.
 
-\vfill
+\bulleted{$\bullet$}{%
+Performed capacity planning and acquired hardware to meet needs of the
+lab.  Considerations included bandwidth, storage capacity, scalability,
+and ease of maintenance.
+}
 
-\centerline{{\it References available upon request}}
+\bulleted{$\bullet$}{%
+Developed a process and designed a form for documenting chain of custody.
+}
 
-\eject\end
+\bulleted{$\bullet$}{%
+Performed numerous on-site data acquisitions, usually consisting on
+imaging one or more hard drives.
+}
+
+\vskip 20pt
+
+{\bf U.S.~Cellular Corp.}\quad Bensenville, IL
+
+Wireless service provider operating in five distinct markets covering
+26 states and serving almost five million customers.
+%Led and performed development for business critical
+%software. Development and production platforms were PA-RISC boxes
+%running HP-UX 11i.
+%
+\vskip 5pt
+\subsection{\sl Programmer Analyst, CARES Development}
+    {May 2004 -- May 2005}
+
+Maintained components of billing system and provided 24x7 production
+support on a rotation.
+
+\bulleted{$\bullet$}{%
+%Designed and implemented interface for local number portability
+%using WebSphere MQ 5.3 on to pass XML messages.
+%Wrote parsing logic in C++ using Xerces to move data elements into
+%Tuxedo's FML buffer format.
+%Developed adapter to MQ in C to extend its store-and-forward
+%capabilities to Tuxedo 6.5.
+%
+Designed and implemented components for integrating MQSeries-based
+system for porting numbers into company's Tuxedo-based system.
+Included adapter written in C++ for translating between XML and
+Tuxedo's FML buffers.
+}
+
+\bulleted{$\bullet$}{%
+Represented company in an ATIS forum responsible for evolving the
+standard for local number portability between wireless carriers.
+}
+
+\vskip 5pt
+\subsection{Systems Analyst, AIM Development}
+    {February 2003 -- April 2004}
+
+Member of team responsible for Java-based web-portal used at mall kiosks
+and by other resellers.
+
+\bulleted{$\bullet$}{%
+Developed enhanced and new workflows to provide more opportunities to
+perform customer service activities through the portal.
+}
+
+\bulleted{$\bullet$}{%
+Helped develop web-based reporting using BusinessObjects.
+}
+
+%\vskip 20pt
+\break
+{\bf Universal Access, Inc.}\quad Chicago, IL
+
+Telecommunications vendor specializing in network pricing and
+provisioning services.
+
+\vskip 5pt
+\subsection{\sl Senior Developer}
+    {April 2001 -- April 2002}
+
+Served as development lead for several projects.
+
+\bulleted{$\bullet$}{%
+Designed a batch service for pricing circuits using Java Messaging
+Service for submitting jobs.
+}
+
+\bulleted{$\bullet$}{%
+Worked on Enterprise Java Beans for automated circuit configuration
+and costing application.
+}
+
+\bulleted{$\bullet$}{%
+Designed a single sign-on security framework for JSP/Servlet
+applications deployed within \hbox{WebLogic} Server 6.1 and using LDAP
+services for authentication.
+}
+
+\vskip 20pt
+
+{\bf Second Millennium Consulting, Inc.}\quad Chicago, IL
+
+Startup consulting firm specializing in Java J2EE solutions using BEA's
+WebLogic application server and Oracle database.
+
+\vskip 5pt
+\subsection{Software Developer}
+    {January 2000 -- March 2001}
+
+Implemented solutions for clients in industries including publishing and
+online media, insurance, marketing research and telecommunications.
+
+}
+
+\section{SKILLS}{%
+{\bf Programming:} C, C++, Python, Java
+
+{\bf Scripting:} Bourne/Bash, Sed, AWK, Tcl, Autotools, Make, SQL
+
+{\bf Version control:} CVS, Git, Subversion, SCCS
+
+{\bf Databases:} Sybase, MySQL, Oracle
+
+{\bf Data analysis:} R, gnuplot
+
+{\bf Operating systems:} Redhat/Fedora Linux, Solaris, HP-UX, Windows NT
+
+{\bf Miscellaneous:} Boost, TCP/IP networking, GNU software, \TeX
+}
+
+\section{TRAINING}{%
+\xmrk\quad Astoria Seminar, Extraordinary C++
+
+\xmrk\quad Sun Certified Programmer for the Java 2 Platform
+
+\xmrk\quad Application Development for WebSphere MQ 5.3
+
+\xmrk\quad Application Development for Tuxedo 6.5
+
+\xmrk\quad HP-UX Administration for Experienced UNIX Administrators
+
+}
+
+\section{OTHER}{%
+Treasurer -- Hobson Village Community Association\hfill
+2007 -- present\par
+
+Board member -- Hobson Village Community Association\hfill
+2005 -- 2007\par
+
+Officer -- Triangle Fraternity, Alpha Chapter\hfill
+1997 -- 1998
+
+Eagle Scout -- Boy Scouts of America\hfill
+1994
+}
+\end
 
