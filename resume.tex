@@ -31,6 +31,7 @@
 \vskip 5pt \hrule \vskip 10pt
 
 \long\def\section#1#2{\leftskip 1in \noindent\llap{\hbox to 1in {\bf #1\hss}}{#2}\vskip 20pt}
+\long\def\lastsection#1#2{\leftskip 1in \noindent\llap{\hbox to 1in {\bf #1\hss}}{#2}}
 \long\def\subsection#1#2{{\sl #1}\hfill{\bf #2}}
 \def\bulleted#1#2{\setbox0=\hbox{#1\ }\hangindent=\wd0#1 #2}
 
@@ -50,6 +51,20 @@ supporting high frequency trading algorithms.
 
 \section{EXPERIENCE}{%
 \parskip=5pt
+{\bf Cognitive Capital, LLC}\quad Chicago, IL
+
+Liquidity provider to capital markets using proprietary automated trading
+technology.  The firm emphasizes a data-driven and collaborative approach
+in its focus on building robust, scalable systems.
+
+\vskip 5pt
+\subsection{Software Engineer}
+    {April 2012 -- present}
+
+Still learning the ropes.
+
+\vskip 20pt
+
 {\bf TradeLink, LLC}\quad Chicago, IL
 
 Trading firm participating in a diversified range of asset classes
@@ -92,6 +107,7 @@ infrastructure and reduces the footprint required when co-locating.
 }
 
 \vskip 5pt
+%\vfil\eject
 \subsection{Software Designer / Technical Lead, Application Development}
     {January 2007 -- August 2010}
 
@@ -110,7 +126,7 @@ Significantly reduced load on network infrastructure and trader
 workstations allowing groups to participate and profit on high-volume
 events that were previously not tradeable at the firm.
 }
-
+\vfil\eject
 \bulleted{$\bullet$}{%
 Managed a project to allow execution desk traders to monitor hundreds of
 positions across the portfolios of its managed funds.
@@ -135,8 +151,7 @@ Implemented multi-threaded feed handler for Eurex's
 to fixed income group operating in London office.
 }
 
-%\vskip 5pt
-\break
+\vskip 5pt
 \subsection{Software Developer, Application Development}
     {June 2005 -- June 2006}
 
@@ -244,8 +259,8 @@ perform customer service activities through the portal.
 Helped develop web-based reporting using BusinessObjects.
 }
 
-%\vskip 20pt
-\break
+\vskip 20pt
+
 {\bf Universal Access, Inc.}\quad Chicago, IL
 
 Telecommunications vendor specializing in network pricing and
@@ -318,7 +333,9 @@ online media, insurance, marketing research and telecommunications.
 
 }
 
-\section{OTHER}{%
+% Need to be smarter about how \section is defined so that the \vskip
+% at the end doesn't cause an empty page.
+\lastsection{OTHER}{%
 Treasurer -- Hobson Village Community Association\hfill
 2008 -- 2012\par
 
@@ -332,4 +349,3 @@ Eagle Scout -- Boy Scouts of America\hfill
 1994
 }
 \end
-
