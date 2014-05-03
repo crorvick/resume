@@ -11,6 +11,8 @@
 \font\bf=ptmb at 10pt
 \font\it=ptmri at 10pt
 \font\sl=ptmbo at 10pt
+\font\tt=pcrr at 10pt
+\font\tb=pcrb at 10pt
 \font\zdb=pzdr at 10pt
 \font\lgrm=ptmr at 24pt
 \font\smrm=ptmr at 9pt
@@ -321,9 +323,26 @@ online media, insurance, marketing research and telecommunications.
 }
 
 \section{PUBLIC}{%
-https://github.com/git/git/commits/b450568209c8ae270d26ee7fda2e4687ad8a5327
+\parskip=3pt
+\subsection{Git}        {\tb https://git.kernel.org/pub/scm/git/git.git}
 
-https://github.com/git/git/commits/fb2c984148a344781833b25361154619230d9dd4
+\bulleted{$\bullet$}{%
+Added support for per author time zones to {\tt cvsimport(1)} command.
+Allows commit log timestamps to be associated with appropriate UTC
+offsets.
+}
+
+\bulleted{$\bullet$}{%
+References are generally allowed to update when pushing to a remote
+repository if the new commit is a descendent of the old.  Added logic to
+reject ``fast-forwarding'' a tag unless it is forced (e.g., with the
+{\tt -{-}force} option.)
+}
+
+\bulleted{$\bullet$}{%
+Various additions and updates to documentation.
+}
+
 }
 
 \section{TRAINING}{%
