@@ -69,8 +69,8 @@ Still learning the ropes.
 
 {\bf TradeLink, LLC}\quad Chicago, IL
 
-Trading firm participating in a diversified range of asset classes
-including securities, futures, options, and commodities.
+Trading firm participating in a range of asset classes including
+securities, futures, and options.
 
 \vskip 5pt
 \subsection{Software Designer, Algorithmic Trading \& Execution}
@@ -81,31 +81,23 @@ algorithmic trading platforms and implementing and maintaining trading
 strategies within these platforms.
 
 \bulleted{$\bullet$}{%
-Optimized order execution for a mean reversion strategy trading a
-\$40 million portfolio.
-Moved logic for managing execution of leg orders out of legacy
-Python-based platform to highly optimized smart order router.
-Significant reduction in latency by about four milliseconds per
-transaction.
+Optimized trading of a \$40 million portfolio by migrating execution
+logic from legacy Python platform to C++ smart order router.
+Reduced latency by roughly four milliseconds per transaction.
 }
 
 \bulleted{$\bullet$}{%
 Analyzed execution for a high frequency FX basis trade.
-Automated the plotting of time-series data pulled from disparate sources
-included log files, market data tick repositories, and trading interface
-audit logs.
-Recommended and implemented numerous optimizations included refactoring
-of the top-level execution logic, bug fixes to the feed handler, and
+Automated reporting of time-series data pulled from disparate sources
+into consolidated plots.
+Recommended and implemented several optimizations included refactoring
+the top-level execution logic, bug fixes to the feed handler, and
 tuning the network stack.
 }
 
 \bulleted{$\bullet$}{%
-Implemented FIX trading interface within firm's second generation
-trading platform.
-Allows trading strategies implemented within this platform to directly
-connect exchanges.
-This eliminates multiple hops incurred using the traditional
-infrastructure and reduces the footprint required when co-locating.
+Implemented FIX trading interface within firm's C++ trading platform
+providing trading strategies with direct connectivity to exchanges.
 }
 
 \vskip 5pt
@@ -118,36 +110,28 @@ Managed development efforts including providing design and technical
 direction to other developers.
 
 \bulleted{$\bullet$}{%
-Designed and implemented a system for local distribution of market data
-using shared memory.
-Load testing on 2.3 GHz quad-core system running four client
-applications sustained rates of more than 200,000 updates/sec with the
-90\super{th} percentile for latencies measuring less than 30 microseconds.
+Designed and implemented distribution framework for market data
+via shared memory with C++ API.
 Significantly reduced load on network infrastructure and trader
 workstations allowing groups to participate and profit on high-volume
 events that were previously not tradeable at the firm.
 }
+
 \bulleted{$\bullet$}{%
 Managed a project to allow execution desk traders to monitor hundreds of
-positions across the portfolios of its managed funds.
-Designed and developed a system where multiple contribution programs
-consolidated relevant data into a server.
-A client application was written for displaying this information,
-allowing traders to quickly see current positions whether they differed
-from the theoretical values, and also to anticipate upcoming trades.
+positions across the portfolios of its managed funds.  Included C++
+libraries, server, and client application.
 }
 
 \bulleted{$\bullet$}{%
-Maintained screen trading application displaying market data as a
-``price ladder'' including aggregate order book volumes and trade
-volumes.
-Allowed traders to click trade or to run it in an automated mode for
-trading spreads.
+Maintained C++ screen trading application displaying a ``price ladder''
+including aggregate book and trade volumes.  Supported click trading and
+auto-spreads.
 }
 
 \bulleted{$\bullet$}{%
-Implemented multi-threaded feed handler for Eurex's
-{\it New Socket Datafeed} to provide non-netted, low-latency price data
+Implemented multi-threaded C++ feed handler for Eurex's
+{\it New Socket Datafeed} providing non-netted, low-latency price data
 to fixed income group operating in London office.
 }
 
@@ -159,24 +143,23 @@ Maintained a number of trading applications and back office software
 critical to the day-to-day operations of the firm.
 
 \bulleted{$\bullet$}{%
-Enhanced and maintained a suite of options trading applications.
-Including two auto-traders implementing passive and active trading
-strategies respectively and an application for monitoring real-time
-implied volatilities against the volatility model being used.
+Enhanced and maintained a suite of C++ options trading applications
+including two auto-traders and a program for monitoring implied
+volatilities in real-time.
 }
 
 \bulleted{$\bullet$}{%
-Responsible for the entirety of firm's legacy Java platform.
-Maintained applications for trade entry and viewing, option volatility
-model parameter generation, and several data maintenance use cases.
-Added automation to the build process and refactored code bases into
-reusable modules with version numbers.
+Responsible for maintaining firm's legacy Java platform including
+post-trade and back-office applications.  
+Automated build process and refactored code base into versioned
+reusable modules.
 }
 
 \bulleted{$\bullet$}{%
-One of two developers to maintain and provide 24x7 production support
-for clearing system.  Implemented modules for processing semi-standard
-and firm-specific data formats.
+One of two developers maintaining and providing 24x7 production support
+for clearing system.
+Implemented Python modules for processing semi-standard and
+firm-specific data formats.
 }
 
 \vskip 20pt
