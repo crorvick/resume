@@ -251,6 +251,22 @@ including media, marketing, and telecommunications.
 
 \section{PUBLIC}{%
 \parskip=3pt
+\subsection{Linux kernel}    {\tb https://github.com/torvalds/linux.git}
+
+\bulleted{$\bullet$}{%
+Refactored USB EHCI debug port definitions into their own header.  This
+allows drivers for the quirky FOTG210 and FUSBH200 USB host controllers
+to pull these definitions in rather than redefining the interface
+themselves, removing about 100 lines of redundant code.
+}
+
+\bulleted{$\bullet$}{%
+Removed unnecessary (and undesirable) {\tt \_\_init} attribute from
+function prototype.
+}
+
+\vskip 8pt
+
 \subsection{Git}        {\tb https://git.kernel.org/pub/scm/git/git.git}
 
 \bulleted{$\bullet$}{%
