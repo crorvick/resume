@@ -254,15 +254,16 @@ including media, marketing, and telecommunications.
 \subsection{Linux kernel}    {\tb https://github.com/torvalds/linux.git}
 
 \bulleted{$\bullet$}{%
+Worked with ALSA subsystem maintainer to move Line 6 sound driver out of
+staging and into the mainline tree.  Refactored code, fixed bugs, and
+reviewed and tested other changes.
+}
+
+\bulleted{$\bullet$}{%
 Refactored USB EHCI debug port definitions into their own header.  This
 allows drivers for the quirky FOTG210 and FUSBH200 USB host controllers
 to pull these definitions in rather than redefining the interface
 themselves, removing about 100 lines of redundant code.
-}
-
-\bulleted{$\bullet$}{%
-Removed unnecessary (and undesirable) {\tt \_\_init} attribute from
-function prototype.
 }
 
 \vskip 8pt
